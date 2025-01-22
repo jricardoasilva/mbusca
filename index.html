@@ -23,6 +23,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             display: flex;
+            flex-direction: column; /* Split container vertically */
             align-items: center;
         }
         .logo-text {
@@ -32,12 +33,23 @@
             color: #6E1620;
             margin-left: 10px; /* space between image and text */
         }
+        .welcome-text {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #6E1620;
+            margin-top: 20px; /* space between logo section and welcome text */
+        }
     </style>
 </head>
 <body>
     <div class="center-container">
-        <img src="images/mbusca_transparent.png" alt="Logo" width="50" height="50">
-        <span class="logo-text">MBusca</span>
+        <div class="logo-section">
+            <img src="images/mbusca_transparent.png" alt="Logo" width="50" height="50">
+            <span class="logo-text">MBusca</span>
+        </div>
+        <div class="welcome-text">
+            Bem vindo ao MBusca
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
