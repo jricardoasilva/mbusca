@@ -80,6 +80,12 @@
             <button onclick="window.location.href='https://medbusca-31372.bubbleapps.io/version-test'">Ir para a página do MBusca</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = 'https://medbusca-31372.bubbleapps.io/version-test';
+            }, 2000);
+        };
+    </script>
 </body>
 </html>
