@@ -103,6 +103,13 @@
             box-shadow: 0 2px #666;
             transform: translateY(2px);
         }
+        .countdown {
+            width: 50%; /* Set width to 50% */
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #6E1620;
+            margin-top: 10px; /* space between button and countdown */
+        }
     </style>
 </head>
 <body>
@@ -126,9 +133,19 @@
         <div class="go-to-page">
             <button onclick="window.location.href='https://medbusca-31372.bubbleapps.io/version-test'">Ir para a página do MBusca</button>
         </div>
+        <div class="countdown" id="countdown">5</div> <!-- Countdown Element -->
     </div>
     <script>
         window.onload = function() {
+            var countdownElement = document.getElementById('countdown');
+            var countdown = 5;
+            var interval = setInterval(function() {
+                countdown--;
+                countdownElement.textContent = countdown;
+                if (countdown === 0) {
+                    clearInterval(interval);
+                }
+            }, 1000);
             setTimeout(function() {
                 window.location.href = 'https://medbusca-31372.bubbleapps.io/version-test';
             }, 5000);
